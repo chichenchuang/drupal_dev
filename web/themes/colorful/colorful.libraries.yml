@@ -1,0 +1,19 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      css/screen.css: {}
+      css/simptip-mini.css: {}
+      css/magnific-popup.css: {}
+  header: true
+  js:
+    js/modernizr.custom.28468.js: {}
+    js/jquery.min.js: {}
+    js/jquery.cslider.js: {}
+    js/fliplightbox.min.js: {}
+    js/jquery.easing.min.js: {}
+    js/jquery.mixitup.min.js: {}
+    js/jquery.magnific-popup.js: {}
+    js/move-top.js: {}
+    js/easing.js: {}
+    js/script.js: {}

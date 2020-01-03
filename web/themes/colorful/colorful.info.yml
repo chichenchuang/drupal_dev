@@ -1,0 +1,14 @@
+name: Colorful
+type: theme
+description: My life is colorful
+package: Custom
+core: 8.x
+
+libraries:
+  - colorful/global-styling
+
+regions:
+  header: Header
+  content: Content
+  sidebar_first: 'Sidebar first'
+  footer: Footer
