@@ -1,0 +1,7 @@
+name: My Partner
+description: Nebula technical partner
+type: module
+core: 8.x
+package: Custom
+
+

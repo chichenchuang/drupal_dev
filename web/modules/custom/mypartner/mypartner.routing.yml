@@ -1,0 +1,34 @@
+mypartner.content:
+  path: '/admin/mypartner'
+  defaults:
+    _title: 'My Partner | Zyxel'
+    _controller: '\Drupal\mypartner\Controller\MyPartnerController::content'
+  requirements:
+    _permission: 'access user profiles'
+
+mypartner.add_content:
+  path: 'admin/mypartner/add'
+  methods: [GET, POST]
+  defaults:
+    _title: 'Create My Partner | Zyxel'
+    _controller: '\Drupal\mypartner\Controller\MyPartnerController::addContentForm'
+  requirements:
+    _permission: 'access user profiles'
+
+mypartner.edit_content:
+  path: 'admin/mypartner/{id}/edit'
+  methods: [GET, POST]
+  defaults:
+    _title: 'Edit My Partner | Zyxel'
+    _controller: '\Drupal\mypartner\Controller\MyPartnerController::editContentForm'
+  requirements:
+    _permission: 'access user profiles'
+
+mypartner.delete_content:
+  path: 'admin/mypartner/{id}/delete'
+  methods: [GET]
+  defaults:
+    _title: 'Edit My Partner | Zyxel'
+    _controller: '\Drupal\mypartner\Controller\MyPartnerController::deleteContentForm'
+  requirements:
+    _permission: 'access user profiles'

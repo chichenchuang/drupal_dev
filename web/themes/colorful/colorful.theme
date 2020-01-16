@@ -1,0 +1,55 @@
+<?php
+
+function colorful_preprocess_page(&$variables) {
+     
+     /*slide1 start*/
+     $variables['slide1_head'] = check_markup(theme_get_setting('slide1_head','colorful'), 'full_html');
+     $variables['slide1_slogan'] = check_markup(theme_get_setting('slide1_slogan','colorful'), 'full_html');
+     $variables['slide1_url'] = theme_get_setting('slide1_url','colorful');
+     /*slide1_image*/
+     $fid = theme_get_setting("slide1_image", "colorful");
+     if (!empty($fid)) {
+          $file = \Drupal\file\Entity\File::load($fid[0]);
+          $uri = $file->getFileUri();
+          $image_path = file_create_url($uri);
+     }
+     else {
+          $image_path = drupal_get_path('theme', 'colorful') . '/images/slider-pic1.png';
+     }
+     $variables['slide1_image'] = $image_path;
+     /*slide1 end*/
+
+     /*slide2 start*/
+     $variables['slide2_head'] = check_markup(theme_get_setting('slide2_head','colorful'), 'full_html');
+     $variables['slide2_slogan'] = check_markup(theme_get_setting('slide2_slogan','colorful'), 'full_html');
+     $variables['slide2_url'] = theme_get_setting('slide2_url','colorful');
+     /*slide2_image*/
+     $fid = theme_get_setting("slide2_image", "colorful");
+     if (!empty($fid)) {
+          $file = \Drupal\file\Entity\File::load($fid[0]);
+          $uri = $file->getFileUri();
+          $image_path = file_create_url($uri);
+     }
+     else {
+          $image_path = drupal_get_path('theme', 'colorful') . '/images/slider-pic2.png';
+     }
+     $variables['slide2_image'] = $image_path;
+     /*slide2 end*/
+
+     /*slide3 start*/
+     $variables['slide3_head'] = check_markup(theme_get_setting('slide3_head','colorful'), 'full_html');
+     $variables['slide3_slogan'] = check_markup(theme_get_setting('slide3_slogan','colorful'), 'full_html');
+     $variables['slide3_url'] = theme_get_setting('slide3_url','colorful');
+     /*slide1_image*/
+     $fid = theme_get_setting("slide3_image", "colorful");
+     if (!empty($fid)) {
+          $file = \Drupal\file\Entity\File::load($fid[0]);
+          $uri = $file->getFileUri();
+          $image_path = file_create_url($uri);
+     }
+     else {
+          $image_path = drupal_get_path('theme', 'colorful') . '/images/slider-pic3.png';
+     }
+     $variables['slide3_image'] = $image_path;
+     /*slide3 end*/
+}

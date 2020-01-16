@@ -1,0 +1,4 @@
+mypartner.view:
+ title: 'Add content for mypartner'
+ parent: system.admin
+ route_name: mypartner.content

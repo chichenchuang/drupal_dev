@@ -1,0 +1,6 @@
+name: Hello World
+description: A custom Drupal 8 module.
+package: Custom
+
+type: module
+core: 8.x
