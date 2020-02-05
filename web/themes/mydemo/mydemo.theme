@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements template_preprocess_page().
+ */
+function mydemo_preprocess_page(&$variables) {
+     
+     $query = \Drupal::entityTypeManager()->getStorage('node')->getQuery();
+     $nids = $query->condition('type', 'banner_images')->execute();// Get all banner_images node IDs.
+     $nodes = \Drupal\node\Entity\Node::loadMultiple($nids);// Load all banner_images nodes.
+
+     $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+     $node = $node_storage->load(3);
+     //echo $node->getType(); 
+
+     // Pass them to page.html.twig.
+     $variables['flowers'] = $nodes;
+     $variables['logo'] = $node->field_logo->entity->getFileUri();
+}
